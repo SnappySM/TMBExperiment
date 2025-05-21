@@ -8,7 +8,7 @@ app.use(json())
 app.get('/', (req, res)=>{
     res.status(200)
     res.send("Welcome to root URL of Server")
-});
+})
 
 app.listen(PORT, (error) => {
     if(!error){
