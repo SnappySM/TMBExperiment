@@ -2,7 +2,6 @@ import express, { json } from 'express';
 import dotenv from 'dotenv';
 
 dotenv.config()
-console.log(process.env.TMB_API_KEY)
 
 const app = express()
 const PORT = 3000
