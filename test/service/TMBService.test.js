@@ -101,3 +101,18 @@ test('getMetroLines validRequest successfulResponse', async () => {
     expect(actual.status).toBe(200)
     expect(actual.data).toEqual(expectedLineTransitResponse)
 })
+
+test('getMetroLines noConnection errorHandled', async () => {
+    const expected = {
+        message: "Connection timed out"
+    }
+    axios.get.mockImplementation(() => Promise.reject({
+        status: 408,
+        data: expected
+    }))
+
+    const actual = await TMBService.getMetroLines()
+
+    expect(actual.status).toBe(408)
+    expect(actual.data.message).toBe(expected.message)
+})
