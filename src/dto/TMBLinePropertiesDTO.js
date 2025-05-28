@@ -1,0 +1,53 @@
+export class TMBLinePropertiesDTO {
+    CODI_FAMILIA
+    CODI_LINIA
+    CODI_OPERADOR
+    CODI_TIPUS_CALENDARI
+    COLOR_AUX_LINIA
+    COLOR_LINIA
+    COLOR_TEXT_LINIA
+    DATA_FI
+    DATA_INICI
+    DESC_LINIA
+    DESC_TIPUS_CALENDARI
+    DESTI_LINIA
+    ID_FAMILIA
+    ID_LINIA
+    ID_OPERADOR
+    ID_TIPUS_CALENDARI
+    ID_TIPUS_TRANSPORT
+    NOM_FAMILIA
+    NOM_LINIA
+    NOM_OPERADOR
+    NOM_TIPUS_TRANSPORT
+    ORDRE_FAMILIA
+    ORDRE_LINIA
+    ORIGEN_LINIA
+
+    constructor(data) {
+        this.CODI_FAMILIA = data.CODI_FAMILIA
+        this.CODI_LINIA = data.CODI_LINIA
+        this.CODI_OPERADOR = data.CODI_OPERADOR
+        this.CODI_TIPUS_CALENDARI = data.CODI_TIPUS_CALENDARI
+        this.COLOR_AUX_LINIA = data.COLOR_AUX_LINIA
+        this.COLOR_LINIA = data.COLOR_LINIA
+        this.COLOR_TEXT_LINIA = data.COLOR_TEXT_LINIA
+        this.DATA_FI = data.DATA_FI
+        this.DATA_INICI = data.DATA_INICI
+        this.DESC_LINIA = data.DESC_LINIA
+        this.DESC_TIPUS_CALENDARI = data.DESC_TIPUS_CALENDARI
+        this.DESTI_LINIA = data.DESTI_LINIA
+        this.ID_FAMILIA = data.ID_FAMILIA
+        this.ID_LINIA = data.ID_LINIA
+        this.ID_OPERADOR = data.ID_OPERADOR
+        this.ID_TIPUS_CALENDARI = data.ID_TIPUS_CALENDARI
+        this.ID_TIPUS_TRANSPORT = data.ID_TIPUS_TRANSPORT
+        this.NOM_FAMILIA = data.NOM_FAMILIA
+        this.NOM_LINIA = data.NOM_LINIA
+        this.NOM_OPERADOR = data.NOM_OPERADOR
+        this.NOM_TIPUS_TRANSPORT = data.NOM_TIPUS_TRANSPORT
+        this.ORDRE_FAMILIA = data.ORDRE_FAMILIA
+        this.ORDRE_LINIA = data.ORIGEN_LINIA
+        this.ORIGEN_LINIA = data.ORIGEN_LINIA
+    }
+}
