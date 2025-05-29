@@ -1,5 +1,5 @@
 import axios from 'axios'
-import TMBService from '../../src/service/TMBService'
+import tmbService from '../../src/service/TMBService'
 import { TMBResponseDTO } from '../../src/dto/TMBResponseDTO'
 
 jest.mock('axios')
@@ -69,7 +69,7 @@ test('getBusLines validRequest successfulResponse', async () => {
         data: transitTMBResponse
     }))
     
-    const actual = await TMBService.getBusLines()
+    const actual = await tmbService.getBusLines()
 
     expect(actual.status).toBe(200)
     expect(actual.data).toEqual(expectedLineTransitResponse)
@@ -84,7 +84,7 @@ test('getBusLines noConnection errorHandled', async () => {
         data: expected
     }))
 
-    const actual = await TMBService.getBusLines()
+    const actual = await tmbService.getBusLines()
 
     expect(actual.status).toBe(408)
     expect(actual.data.message).toBe(expected.message)
@@ -96,7 +96,7 @@ test('getMetroLines validRequest successfulResponse', async () => {
         data: transitTMBResponse
     }))
     
-    const actual = await TMBService.getMetroLines()
+    const actual = await tmbService.getMetroLines()
 
     expect(actual.status).toBe(200)
     expect(actual.data).toEqual(expectedLineTransitResponse)
@@ -111,7 +111,7 @@ test('getMetroLines noConnection errorHandled', async () => {
         data: expected
     }))
 
-    const actual = await TMBService.getMetroLines()
+    const actual = await tmbService.getMetroLines()
 
     expect(actual.status).toBe(408)
     expect(actual.data.message).toBe(expected.message)

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { TMBResponseDTO } from '../dto/TMBResponseDTO'
+import { TMBResponseDTO } from '../dto/TMBResponseDTO.js'
 
 const APIKey = process.env.TMB_API_KEY
 const appId = process.env.TMB_APP_ID
@@ -26,4 +26,4 @@ async function getMetroLines() {
     }
 }
 
-module.exports = {getBusLines, getMetroLines}
+export default {getBusLines, getMetroLines}

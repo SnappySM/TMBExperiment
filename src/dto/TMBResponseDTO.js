@@ -1,7 +1,7 @@
-import { TMBCrsDTO } from './TMBCrsDTO'
-import { TMBFeatureDTO } from './TMBFeatureDTO'
-import { TMBGeometryDTO } from './TMBGeometryDTO'
-import { TMBLinePropertiesDTO } from './TMBLinePropertiesDTO'
+import { TMBCrsDTO } from './TMBCrsDTO.js'
+import { TMBFeatureDTO } from './TMBFeatureDTO.js'
+import { TMBGeometryDTO } from './TMBGeometryDTO.js'
+import { TMBLinePropertiesDTO } from './TMBLinePropertiesDTO.js'
 
 export class TMBResponseDTO {
     crs
