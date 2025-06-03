@@ -77,7 +77,7 @@ test('getBusLines validRequest successfulResponse', async () => {
 
 test('getBusLines noConnection errorHandled', async () => {
     const expected = {
-        message: "Connection timed out"
+        message: 'Error when accessing an external service'
     }
     axios.get.mockImplementation(() => Promise.reject({
         status: 408,
@@ -86,7 +86,7 @@ test('getBusLines noConnection errorHandled', async () => {
 
     const actual = await tmbService.getBusLines()
 
-    expect(actual.status).toBe(408)
+    expect(actual.status).toBe(500)
     expect(actual.data.message).toBe(expected.message)
 })
 
@@ -104,7 +104,7 @@ test('getMetroLines validRequest successfulResponse', async () => {
 
 test('getMetroLines noConnection errorHandled', async () => {
     const expected = {
-        message: "Connection timed out"
+        message: 'Error when accessing an external service'
     }
     axios.get.mockImplementation(() => Promise.reject({
         status: 408,
@@ -113,6 +113,6 @@ test('getMetroLines noConnection errorHandled', async () => {
 
     const actual = await tmbService.getMetroLines()
 
-    expect(actual.status).toBe(408)
+    expect(actual.status).toBe(500)
     expect(actual.data.message).toBe(expected.message)
 })
